@@ -1,0 +1,323 @@
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+
+  <title>How AC Works</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+ 
+  <link rel='stylesheet' href='css/style.css'>
+
+</head>
+
+<body>
+  <div class='top_bar' id = 'top_bar_title'>
+      <!-- <img id = 'back' src='images/back_button.png'> -->
+      <h1 class = 'title' >How Air Conditioner Works?</h1>
+  </div>
+
+  <progress id='top_bar_progress' value='10' max='100' style='display: none;'></progress>
+
+  <div class='changing_frame' id = 'intro'>
+     <div class='quote'>
+       <div class='teacher_avatar'>
+         <img src='images/teacher_1.png'>
+       </div>
+       <div>
+         <p class='quote-line-1'>Hey! I heard that you are interested in learning how air conditioner works. You’ve come to the right place! In this lesson, you will learn what’s <span class='highlight'>inside the air-conditioner</span> and <span class='highlight'>what makes it work.</span> </p>
+         <p class='quote-line-2'> No worries! it all connects to back to the high school things and non-enginneering students can easily learn.</p>
+         <p class='quote-line-2'>Are you ready?</p>
+       </div>
+       
+     </div>
+     <div class='large-pic-cont'>
+       <img class = 'large-pic' src='images/AC-W-LABEL.png'>
+     </div>
+  </div>
+
+  <div class='changing_frame' id = 'pre_assess' style='display: none;'>
+     <div class='quote'>
+       <div class='teacher_avatar'>
+         <img src='images/teacher_1.png'>
+       </div>
+       <div>
+         <p class='quote-line-1'>The refrigerant flows through the pipes, changing its <span class='highlight'>temperature and state.</span> Do you know what is the temperature and state of the <span class='highlight'>refrigerant</span> at each pipe here?</p>
+         <p class='quote-line-2'><span class='highlight'>Drag and drop</span> the tags into the correct positions. </p>
+       </div>
+       
+     </div>
+     <div class='large-pic-cont'>
+       <img class = 'large-pic' src='images/AC-W-LABEL.png'>
+     </div>
+
+     <!--drag area-->
+     <div class='drop_area_cont'>
+       <div class = 'tag tag_temp_solid_border' id='drop_1' ondrop='drop(event)' ondragover='dragover(event)'><span>Cold</span></div>
+       <div class = 'tag tag_temp_dashed_border' id='drop_2' ondrop='drop(event)' ondragover='dragover(event)'></div>
+       <div class = 'tag tag_temp_dashed_border' id='drop_3' ondrop='drop(event)' ondragover='dragover(event)'></div>
+       <div class = 'tag tag_state_dashed_border' id='drop_4' ondrop='drop(event)' ondragover='dragover(event)'></div>
+       <div class = 'tag tag_state_solid_border' id='drop_5' ondrop='drop(event)' ondragover='dragover(event)'><span>Gas</span></div>
+       <div class = 'tag tag_state_dashed_border' id='drop_6' ondrop='drop(event)' ondragover='dragover(event)'></div>
+     </div>
+
+     <div class='drag_item_cont'>
+       <div class = 'tag tag_temp_solid_border' id='drag_1' draggable='true' ondragstart='drag(event)'><span>Hot</span></div>
+       <div class = 'tag tag_temp_solid_border' id='drag_2' draggable='true' ondragstart='drag(event)'><span>Cold</span></div>
+       <div class = 'tag tag_state_solid_border' id='drag_3' draggable='true' ondragstart='drag(event)'><span>Gas</span></div>
+       <div class = 'tag tag_state_solid_border' id='drag_4' draggable='true' ondragstart='drag(event)'><span>Liquid</span></div>
+     </div>
+  </div>
+
+  <!--Part I: Description-->
+
+  <div class='changing_frame' id = 'first_quiz' style='display: none;'>
+      <!-- Multiple Choices -->
+      <h1>Part I. How does AC work?</h1>
+      <h2>Do you know what does an evaporator absorb?</h2>
+
+      <div class='quiz_row'>
+        <div>
+            <button onclick='choose_A_as_answer()' id = 'first_quiz_A' class="multiple_choice"><span>A. Hot Air</span></button></br>
+            <button onclick='choose_B_as_answer()' id = 'first_quiz_B' class="multiple_choice"><span>B. Cold Air</span></button></br>
+            <button onclick='choose_C_as_answer()' id = 'first_quiz_C' class="multiple_choice"><span>C. Hot Liquid</span></button></br>
+            <button onclick='choose_D_as_answer()' id = 'first_quiz_D' class="multiple_choice"><span>D. Cold Liquid</span></button></br>
+        </div>
+
+        <div>
+            <img class = 'quiz_pic' src="images/Q1.png">
+        </div>
+      </div>
+
+      
+
+       <!--Input box-->
+      <form id = 'q2'>
+        <h2>Explain your choice here!</h2> 
+        <input type='text' name='explain' class='input_box'>
+      </form>
+  </div>
+
+  <div class='changing_frame' id = 'first_video' style='display: none;'>
+    <h1>Part I. How does AC work?</h1>
+    <iframe src="https://www.youtube.com/embed/HpyNmZ8vFMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class='changing_frame' id = 'first_quiz_retest' style='display: none;'>
+      <!-- Multiple Choices -->
+      <h2>After watching the video, do you want to change your answer for this question?</h2>
+      <h2>Do you know what does an evaporator absorb?</h2>
+
+      <div class='quiz_row'>
+        <div>
+            <button onclick='choose_A_as_answer()' id = 'first_quiz_A' class="multiple_choice"><span>A. Hot Air</span></button></br>
+            <button onclick='choose_B_as_answer()' id = 'first_quiz_B' class="multiple_choice"><span>B. Cold Air</span></button></br>
+            <button onclick='choose_C_as_answer()' id = 'first_quiz_C' class="multiple_choice"><span>C. Hot Liquid</span></button></br>
+            <button onclick='choose_D_as_answer()' id = 'first_quiz_D' class="multiple_choice"><span>D. Cold Liquid</span></button></br>
+        </div>
+
+        <div>
+            <img class = 'quiz_pic' src="images/Q1.png">
+        </div>
+      </div>
+
+      
+
+       <!--Input box-->
+      <form id = 'q2'>
+        <h2>Explain your choice here!</h2> 
+        <input type='text' name='explain' class='input_box'>
+      </form>
+  </div>
+
+  <!--Part II: Guided Discovery-->
+
+  <div class='changing_frame' id = 'second_quiz' style='display: none;'>
+      <!-- Multiple Choices -->
+      <h1>Part II. What is molecule movement?</h1>
+      <h2>What is the appropriate temperature in the blank?</h2>
+
+      <div class='quiz_row'>
+        <div>
+            <button onclick='choose_A_as_answer()' id = 'first_quiz_A' class="multiple_choice"><span>A. 0</span></button></br>
+            <button onclick='choose_B_as_answer()' id = 'first_quiz_B' class="multiple_choice"><span>B. 200</span></button></br>
+            <button onclick='choose_C_as_answer()' id = 'first_quiz_C' class="multiple_choice"><span>C. 400</span></button></br>
+            <button onclick='choose_D_as_answer()' id = 'first_quiz_D' class="multiple_choice"><span>D. 600</span></button></br>
+        </div>
+
+        <div>
+            <img class = 'quiz_pic' src="images/Q2.png">
+        </div>
+      </div>
+
+      
+
+       <!--Input box-->
+      <form id = 'q2'>
+        <h2>Explain your choice here!</h2> 
+        <input type='text' name='explain' class='input_box'>
+      </form>
+  </div>
+
+  <div class='changing_frame' id = 'second_video' style='display: none;'>
+    <h1>Part II. What is molecule movement?</h1>
+    <iframe src="https://www.youtube.com/embed/tU6TmA3vA7o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+
+  <div class='changing_frame' id = 'second_quiz_retest' style='display: none;'>
+      <h2>After watching the video, do you want to change your answer for this question?</h2>
+      <!-- Multiple Choices -->
+      <h2>What is the appropriate temperature in the blank?</h2>
+
+      <div class='quiz_row'>
+        <div>
+            <button onclick='choose_A_as_answer()' id = 'first_quiz_A' class="multiple_choice"><span>A. 0</span></button></br>
+            <button onclick='choose_B_as_answer()' id = 'first_quiz_B' class="multiple_choice"><span>B. 200</span></button></br>
+            <button onclick='choose_C_as_answer()' id = 'first_quiz_C' class="multiple_choice"><span>C. 400</span></button></br>
+            <button onclick='choose_D_as_answer()' id = 'first_quiz_D' class="multiple_choice"><span>D. 600</span></button></br>
+        </div>
+
+        <div>
+            <img class = 'quiz_pic' src="images/Q2.png">
+        </div>
+      </div>
+
+      
+
+       <!--Input box-->
+      <form id = 'q2'>
+        <h2>Explain your choice here!</h2> 
+        <input type='text' name='explain' class='input_box'>
+      </form>
+  </div>
+
+  <div class='changing_frame' id = 'guided_discovery' style='display: none;'>
+     <h2>Based on the examples and description, can you come up with your own equation about the relationship between pressure and temperature of refrigerant?</h2>
+
+     <div class='flex_display'>
+       <input type='text' name='explain' class='input_box_sm margin-right-20'>
+       <h1 class='margin-right-20'>=</h1>
+       <input type='text' name='explain' class='input_box_sm margin-right-20'>
+     </div>
+     
+  </div>
+
+  <div class='changing_frame' id = 'guided_discovery_fb' style='display: none;'>
+     <h2>This is what your peer thought! We are going to explain more in the third video.</h2>
+
+     <img class = 'large-pic' src='images/guided_discovery.png'>     
+  </div>
+
+  <!--Part III: Principles and Law-->
+  <div class='changing_frame' id = 'third_quiz' style='display: none;'>
+      <!-- Multiple Choices -->
+      <h1>Part III. What is gas equation?</h1>
+      <h2>Compressor is known as the “heart” of an air conditioning system. Do you know how the refrigerant changes within the compressor?</h2>
+
+      <div class='quiz_row'>
+        <div>
+            <button onclick='choose_A_as_answer()' id = 'first_quiz_A' class="multiple_choice"><span>A. None</span></button></br>
+            <button onclick='choose_B_as_answer()' id = 'first_quiz_B' class="multiple_choice"><span>B. Temperature</span></button></br>
+            <button onclick='choose_C_as_answer()' id = 'first_quiz_C' class="multiple_choice"><span>C. State</span></button></br>
+        </div>
+
+        <div>
+            <img class = 'quiz_pic' src="images/Q3.png">
+        </div>
+      </div>
+
+      
+
+       <!--Input box-->
+      <form id = 'q2'>
+        <h2>Explain your choice here!</h2> 
+        <input type='text' name='explain' class='input_box'>
+      </form>
+  </div>
+
+  <div class='changing_frame' id = 'third_video' style='display: none;'>
+    <h1>Part III. What is gas equation?</h1>
+    <iframe src="https://www.youtube.com/embed/wPg4SvTvEYM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class='changing_frame' id = 'third_quiz_retest' style='display: none;'>
+      
+      <h2>After watching the video, do you want to change your answer for this question?</h2>
+      <!-- Multiple Choices -->
+      <h2>Compressor is known as the “heart” of an air conditioning system. Do you know how the refrigerant changes within the compressor?</h2>
+
+      <div class='quiz_row'>
+        <div>
+            <button onclick='choose_A_as_answer()' id = 'first_quiz_A' class="multiple_choice"><span>A. None</span></button></br>
+            <button onclick='choose_B_as_answer()' id = 'first_quiz_B' class="multiple_choice"><span>B. Temperature</span></button></br>
+            <button onclick='choose_C_as_answer()' id = 'first_quiz_C' class="multiple_choice"><span>C. State</span></button></br>
+        </div>
+
+        <div>
+            <img class = 'quiz_pic' src="images/Q3.png">
+        </div>
+      </div>
+
+      
+
+       <!--Input box-->
+      <form id = 'q2'>
+        <h2>Explain your choice here!</h2> 
+        <input type='text' name='explain' class='input_box'>
+      </form>
+  </div>
+
+  <!--post quiz-->
+
+  <div class='changing_frame' id = 'post_assess' style='display: none;'>
+     <div class='quote'>
+       <div class='teacher_avatar'>
+         <img src='images/teacher_1.png'>
+       </div>
+       <div>
+         <p class='quote-line-1'>The refrigerant flows through the pipes, changing its temperature and state. Do you know what is the temperature and state of the refrigerant at each pipe here?</p>
+         <p class='quote-line-2'>Drag and drop the tags into the correct positions. </p>
+       </div>
+       
+     </div>
+     <div class='large-pic-cont'>
+       <img class = 'large-pic' src='images/AC-W-LABEL.png'>
+     </div>
+
+     <!--drag area-->
+     <div class='drop_area_cont'>
+       <div class = 'tag tag_temp_solid_border' id='drop_1' ondrop='drop(event)' ondragover='dragover(event)'><span>Cold</span></div>
+       <div class = 'tag tag_temp_dashed_border' id='drop_2' ondrop='drop(event)' ondragover='dragover(event)'></div>
+       <div class = 'tag tag_temp_dashed_border' id='drop_3' ondrop='drop(event)' ondragover='dragover(event)'></div>
+       <div class = 'tag tag_state_dashed_border' id='drop_4' ondrop='drop(event)' ondragover='dragover(event)'></div>
+       <div class = 'tag tag_state_solid_border' id='drop_5' ondrop='drop(event)' ondragover='dragover(event)'><span>Gas</span></div>
+       <div class = 'tag tag_state_dashed_border' id='drop_6' ondrop='drop(event)' ondragover='dragover(event)'></div>
+     </div>
+
+     <div class='drag_item_cont'>
+       <div class = 'tag tag_temp_solid_border' id='drag_1' draggable='true' ondragstart='drag(event)'><span>Hot</span></div>
+       <div class = 'tag tag_temp_solid_border' id='drag_2' draggable='true' ondragstart='drag(event)'><span>Cold</span></div>
+       <div class = 'tag tag_state_solid_border' id='drag_3' draggable='true' ondragstart='drag(event)'><span>Gas</span></div>
+       <div class = 'tag tag_state_solid_border' id='drag_4' draggable='true' ondragstart='drag(event)'><span>Liquid</span></div>
+     </div>
+  </div>
+
+
+  <!--feedback zone-->
+  <div class='control' id = 'control'>
+        <div id='fb' class='fb-container'><p></p></div>
+        <!-- <button onclick='submitAnswer(d1.choice.value)'>Submit Answer</button> -->
+        <div class='btn-container' id='control_button_cont'>
+          <!-- <button onclick='submitAnswer()' class='main-btn'><span>Next</span></button> -->
+
+          <button onclick='change_to_pre_assess()' class='main-btn'><span>Next</span></button>
+        </div>
+  </div>
+
+
+  <script src = 'js/main.js'></script>
+</body>
+
+<footer>
+</footer>
