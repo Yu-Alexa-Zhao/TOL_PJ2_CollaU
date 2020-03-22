@@ -1,31 +1,74 @@
-h1, h2, h3, p, span {
-	font-family: 'Lato', sans-serif;
+h1, h2 {
+	font-family: Playfair Display;
 	font-style: normal;
+	font-weight: bold;
 }
 
+
 h1 {
-	font-weight: bold;
-	font-size: 22px;
-	line-height: 26px;
-
-	margin-bottom: 24px;
-
-	color: #222222;
+	font-size: 32px;
+	line-height: 40px;
+	/* identical to box height, or 125% */
+	text-align: center;
+	color: #4E4E4E;
 }
 
 h2 {
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 19px;
+	font-size: 20px;
+	line-height: 27px;
+	display: flex;
+	align-items: center;
 
-	color: #222222;
+	color: #01CD62;
+}
 
-	margin-bottom: 24px;
+h3 {
+	font-size: 15px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+
+	color: #4E4E4E;
 }
 
 body {
 	margin:0px;
 }
+
+.p1 {
+	font-family: Source Sans Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 25px;
+
+	color: #4E4E4E;
+}
+
+.p2 {
+	font-family: Source Sans Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	/* identical to box height, or 137% */
+
+	color: #4E4E4E;
+
+}
+
+.caption {
+	font-family: Source Sans Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	/* identical to box height */
+
+
+color: #B6B6B6;
+}
+
 
 
 .top_bar {
@@ -217,24 +260,33 @@ iframe {
 }
 
 .main-btn {
-	width: 136px;
-	height: 42px;
+	width: 146px;
+	height: 49px;
 
-	background: #01CD62;
-	border: 2px solid #01CD62;
+	background: #1C2ECC;
+	border: 2px solid #1C2ECC;
 	box-sizing: border-box;
 	border-radius: 10px;
 
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
 	text-align: center;
 
-	position: relative;
-	margin:0 auto;
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+
+	color: #FFFFFF;
 }
 
 .main-btn span {
-	font-weight: bold;
 	font-size: 18px;
-	line-height: 22px;
+	line-height: 24px;
 
 	align-items: center;
 
