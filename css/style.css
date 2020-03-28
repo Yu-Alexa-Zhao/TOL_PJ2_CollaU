@@ -7,10 +7,11 @@ h1, h2 {
 
 h1 {
 	font-size: 32px;
-	line-height: 40px;
-	/* identical to box height, or 125% */
+	line-height: 125%;
 	text-align: center;
 	color: #4E4E4E;
+	margin-top:0px;
+	margin-bottom: 0px
 }
 
 h2 {
@@ -18,6 +19,9 @@ h2 {
 	line-height: 27px;
 	display: flex;
 	align-items: center;
+
+	margin-top:0px;
+	margin-bottom: 0px;
 
 	color: #01CD62;
 }
@@ -29,10 +33,23 @@ h3 {
 	align-items: center;
 
 	color: #4E4E4E;
+	margin-top:0px;
+	margin-bottom: 0px;
 }
 
 body {
 	margin:0px;
+}
+
+input {
+	font-family: Playfair Display;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 200%;
+	padding-left: 30px;
+
+	color: #1C2ECC;
 }
 
 .p1 {
@@ -41,6 +58,9 @@ body {
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 25px;
+
+	margin-top:0px;
+	margin-bottom: 0px;
 
 	color: #4E4E4E;
 }
@@ -53,6 +73,9 @@ body {
 	line-height: 22px;
 	/* identical to box height, or 137% */
 
+	margin-top:0px;
+	margin-bottom: 0px;
+
 	color: #4E4E4E;
 
 }
@@ -64,9 +87,89 @@ body {
 	font-size: 12px;
 	line-height: 15px;
 	/* identical to box height */
+	color: #B6B6B6;
+}
 
+.title-mid {
+	margin-top: 20vh;
+	display: flex;
+  	justify-content: center;
+  	flex-direction: column;
+}
 
-color: #B6B6B6;
+.name_parent {
+	margin-top: 62px;
+}
+
+.center_children {
+ 	text-align: center;
+}
+
+.center_children_div {
+	margin: auto;
+}
+
+.flex_parent {
+	display: flex;
+  	justify-content: center;
+}
+
+.flex_parent_column {
+	display: flex;
+  	justify-content: center;
+	flex-direction: column;
+}
+
+.margin_top_34 {
+	margin-top: 34px
+}
+
+.learning_topics {
+	width: 285px;
+}
+
+#topic1 {
+	background: #F9FFFB;
+	border: 1px solid #01CD62;
+	border-radius: 10px;
+	padding-top:14px;
+	padding-bottom:14px;
+	padding-left: 23px;
+	padding-right: 23px;
+}
+
+#topic1 h2 {
+	color: #01CD62;
+}
+
+#topic2 {
+	background: #FFFFF9;
+	border: 1px solid #FFCE54;
+
+	border-radius: 10px;
+	padding-top:14px;
+	padding-bottom:14px;
+	padding-left: 23px;
+	padding-right: 23px;
+}
+
+#topic2 h2 {
+	color: #FFCE54;
+}
+
+#topic3 {
+	background: #F9FBFF;
+	border: 1px solid #1C2ECC;
+
+	border-radius: 10px;
+	padding-top:14px;
+	padding-bottom:14px;
+	padding-left: 23px;
+	padding-right: 23px;
+}
+
+#topic3 h2{
+	color: #1C2ECC;
 }
 
 
@@ -241,9 +344,11 @@ iframe {
 /*input box*/
 
 .input_box {
-	/*width: 624px;*/
-	width: 100%;
-	height: 131px;
+
+	margin-top: 18px;
+
+	width: 199px;
+	height: 70px;
 
 	border: 1px solid #B6B6B6;
 	box-sizing: border-box;
