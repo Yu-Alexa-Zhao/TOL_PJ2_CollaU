@@ -65,6 +65,10 @@ function change_to_first_doc(){
 	document.body.scrollTop = 0;
  	document.documentElement.scrollTop = 0;
 
+
+ 	var userInput = document.getElementById('name_input').value;
+	document.getElementById('doc1_name').innerHTML = userInput
+
  	startTimer1();
 }
 
@@ -79,6 +83,9 @@ function change_to_second_doc(){
 	document.body.scrollTop = 0;
  	document.documentElement.scrollTop = 0;
 
+ 	var userInput = document.getElementById('name_input').value;
+	document.getElementById('doc2_name').innerHTML = userInput
+
  	startTimer2();
 }
 
@@ -89,9 +96,11 @@ function change_to_third_doc(){
 	var dis_3 = document.getElementById('dis_3');
 	dis_3.style.display = 'block';
 
-
 	document.body.scrollTop = 0;
  	document.documentElement.scrollTop = 0;
+
+ 	var userInput = document.getElementById('name_input').value;
+	document.getElementById('doc3_name').innerHTML = userInput
 
  	startTimer3();
 }
@@ -114,6 +123,9 @@ function change_to_final_score() {
 
 	document.body.scrollTop = 0;
  	document.documentElement.scrollTop = 0;
+
+ 	var userInput = document.getElementById('name_input').value;
+	document.getElementById('myName2').innerHTML = userInput;
 }
 
 function choose_A_as_answer() {

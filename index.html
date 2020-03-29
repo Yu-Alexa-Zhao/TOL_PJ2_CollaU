@@ -37,7 +37,7 @@
   <!--Learning topics-->
   <div class='changing_frame' id = 'learn_topic' style='display: none;'>
 
-    <div class='title-mid'>
+    <div class='title-top'>
       <h1>Learning topics</h1>
     </div>
 
@@ -69,11 +69,12 @@
 
   <!--Video-->
   <div class='changing_frame' id = 'first_video' style='display: none;'>
-    <h1>What is ideal gas equation?</h1>
-    <p class="p2">Part 3/3</p>
-    <iframe src="https://www.youtube.com/embed/HpyNmZ8vFMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    <button onclick='change_to_first_quiz()' class='main-btn'><span>Next</span></button>
+    <div class='title-top'><h1>What is ideal gas equation?</h1></div>
+    <p class="p2 center_children margin_top_16">Part 3/3</p>
+    <iframe class = "margin_top_16" src="https://www.youtube.com/embed/HpyNmZ8vFMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class='flex_parent margin_top_34'><button onclick='change_to_first_quiz()' class='main-btn'><span>Next</span></button></div>
   </div>
 
 
@@ -81,65 +82,104 @@
   <div class='changing_frame' id = 'first_quiz' style='display: none;'>
     First Quiz
 
-    <button onclick='change_to_team_assign()' class='main-btn'><span>Next</span></button>
+    <div class='flex_parent margin_top_34'><button onclick='change_to_team_assign()' class='main-btn'><span>Next</span></button></div>
   </div>
 
 
   <!--Assigning Team-->
   <div class='changing_frame' id = 'team_assign' style='display: none;'>
-    <h1>Team Assignment for </h1>
-    <h1>How Air Conditioner Works</h1>
-    <p class="p1">Team assigned!</p>
-    <span>Anonymous Bear</span><span>Anonymous Dragon</span><span id = 'myName'>Yu Zhao</span>
-    <button onclick='change_to_first_doc()' class='main-btn'><span>Get Started</span></button>
+    <div class='title-mid'>
+        <h1>Team Assignment for </h1>
+        <h1>How Air Conditioner Works</h1>
+    </div>
+
+    <div class='name_parent flex_parent_column'>
+      <p class='p1 center_children'>Team assigned!</p>
+      <div class="flex_parent margin_top_34">
+        <div class='name_tag' id = 'name_tag1'><h3>Anonymous Bear</h3></div>
+        <div class='name_tag' id = 'name_tag2'><h3>Anonymous Dragon</h3></div>
+        <div class='name_tag' id = 'name_tag3'><h3 id = 'myName'>Yu Zhao</h3></div>
+      </div>
+      
+    </div>
+    
+    <div class='flex_parent margin_top_34'>
+      <button onclick='change_to_first_doc()' class='main-btn'><span>Get Started</span></button>
+    </div>
+
   </div>
 
   <!--Google Discussion 1-->
   <div class='changing_frame' id = 'dis_1' style='display: none;'>
-      <h1>Learning from your peer: How AC works?</h1>
-      <p>5:00</p>
-      <div>Time left = <span id="timer1"></span></div>
-      <p>@Anonymous Bear will teach  @Anonymous Dragon  and  @Yu </p>
-      <div>
-        <h3>How to discuss?</h3>
-        <p class="p1">You can post your questions in the google doc. Your classmates will answer your questions.</p>
-        <p class="p1">You can also answer others’ questions in the google doc. You can help your classmates in this way.</p>
+      <div class='title-top margin_top_16'><h1>Learning from your peer: How AC works?</h1></div>
+
+      <div class='flex_parent_column margin_top_16'>
+        <div class = 'center_children_div'><span class="p2">Time left = </span><span id="timer1" class="p2"></span></div>
+        <div class = 'center_children_div discuss_guide margin_top_16'>
+          <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">How to discuss?</h3></div>
+          
+          <p class="p2 margin-left-30">Fill in the google doc with the questions you have.</p>
+          <p class="p2 margin-left-30">Your peer will teach you by answering these questions.</p>
+          <p class="p2 margin-left-30">Anonymous Bear will teach Anonymous Dragon and <span id = 'doc1_name'></span></p>
+        </div>
+        
+        
+        <button class='sec-btn margin_top_34 center_children_div'><span onClick="window.open('https://docs.google.com/document/d/1cxcgUKemhq9WgRky9TOL5cVy5Ek-KR0uh64gAeGdCDc/edit?usp=sharing', '_blank')">Open Link In a Browser</span></button>
       </div>
 
-      <iframe src="https://docs.google.com/document/d/e/2PACX-1vQeRGGYYaeK27YU3NHsetLej9fzHFh3kiDvZDKZa-iMw81Cp83SfOJ6XmWc8S5jibQwnQqKleaCfHju/pub?embedded=true"></iframe>
-      <button onclick='change_to_second_doc()' class='main-btn'><span>Next</span></button>
+      <iframe class = 'margin_top_34' src="https://docs.google.com/document/d/e/2PACX-1vQeRGGYYaeK27YU3NHsetLej9fzHFh3kiDvZDKZa-iMw81Cp83SfOJ6XmWc8S5jibQwnQqKleaCfHju/pub?embedded=true"></iframe>
+
+      <div class='flex_parent margin_top_34'><button onclick='change_to_second_doc()' class='main-btn'><span>Next</span></button></div>
   </div>
 
   <!--Google Discussion 2-->
   <div class='changing_frame' id = 'dis_2' style='display: none;'>
-      <h1>Learning from your peer: Molecule movement?</h1>
-      <p>5:00</p>
-      <div>Time left = <span id="timer2"></span></div>
-      <p>@Anonymous Bear will teach  @Anonymous Dragon  and  @Yu </p>
-      <div>
-        <h3>How to discuss?</h3>
-        <p class="p1">You can post your questions in the google doc. Your classmates will answer your questions.</p>
-        <p class="p1">You can also answer others’ questions in the google doc. You can help your classmates in this way.</p>
+      <div class='title-top margin_top_16'><h1>Learning from your peer: Molecule movement?</h1></div>
+
+
+      <div class='flex_parent_column margin_top_16'>
+        <div class = 'center_children_div'><span class="p2">Time left = </span><span id="timer2" class="p2"></span></div>
+        <div class = 'center_children_div discuss_guide margin_top_16'>
+          <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">How to discuss?</h3></div>
+          
+          <p class="p2 margin-left-30">Fill in the google doc with the questions you have.</p>
+          <p class="p2 margin-left-30">Your peer will teach you by answering these questions.</p>
+          <p class="p2 margin-left-30">Anonymous Dragon will teach Anonymous Bear and <span id = 'doc2_name'></span></p>
+        </div>
+        
+        
+        <button class='sec-btn margin_top_34 center_children_div'><span onClick="window.open('https://docs.google.com/document/d/1wWgv-rs-JVHpmNYPCGWqEQyFu-3GL4Pbo4yxNRBZVeA/edit?usp=sharing', '_blank')">Open Link In a Browser</span></button>
       </div>
 
-      <iframe src="https://docs.google.com/document/d/e/2PACX-1vQeRGGYYaeK27YU3NHsetLej9fzHFh3kiDvZDKZa-iMw81Cp83SfOJ6XmWc8S5jibQwnQqKleaCfHju/pub?embedded=true"></iframe>
-      <button onclick='change_to_third_doc()' class='main-btn'><span>Next</span></button>
+
+      <iframe class = 'margin_top_34' src="https://docs.google.com/document/d/e/2PACX-1vTlOsfoG3jzyT3Fnbdoaz5ToxQu5N07c0k8isUUaRNXzgLWvYKOdhWmUclY8lI8G6EZMtNPQ6z99Yss/pub?embedded=true"></iframe>
+
+      <div class='flex_parent margin_top_34'><button onclick='change_to_third_doc()' class='main-btn'><span>Next</span></button></div>
   </div>
 
   <!--Google Discussion3 -->
   <div class='changing_frame' id = 'dis_3' style='display: none;'>
-      <h1>Now, it’s time to share your knowledge on ideal gas equation </h1>
-      <p>5:00</p>
-      <div>Time left = <span id="timer3"></span></div>
-      <p>@Anonymous Bear will teach  @Anonymous Dragon  and  @Yu </p>
-      <div>
-        <h3>How to discuss?</h3>
-        <p class="p1">You can post your questions in the google doc. Your classmates will answer your questions.</p>
-        <p class="p1">You can also answer others’ questions in the google doc. You can help your classmates in this way.</p>
+    
+      <div class='title-top margin_top_16'><h1>Now, it’s time to share your knowledge on ideal gas equation!</h1></div>
+
+
+      <div class='flex_parent_column margin_top_16'>
+        <div class = 'center_children_div'><span class="p2">Time left = </span><span id="timer3" class="p2"></span></div>
+        <div class = 'center_children_div discuss_guide margin_top_16'>
+          <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">How to discuss?</h3></div>
+          
+          <p class="p2 margin-left-30">Fill in the google doc with the questions you have.</p>
+          <p class="p2 margin-left-30">Your peer will teach you by answering these questions.</p>
+          <p class="p2 margin-left-30"><span id = 'doc3_name'></span> will teach Anonymous Dragon and Anonymous Bear</p>
+        </div>
+        
+        
+        <button class='sec-btn margin_top_34 center_children_div'><span onClick="window.open('https://docs.google.com/document/d/1TWCd-MZWSZNC-OmiwxP-Y6RoppACuO0_B8rZmPAvIAg/edit?usp=sharing', '_blank')">Open Link In a Browser</span></button>
       </div>
 
-      <iframe src="https://docs.google.com/document/d/e/2PACX-1vQeRGGYYaeK27YU3NHsetLej9fzHFh3kiDvZDKZa-iMw81Cp83SfOJ6XmWc8S5jibQwnQqKleaCfHju/pub?embedded=true"></iframe>
-      <button onclick='change_to_post_test()' class='main-btn'><span>Next</span></button>
+      <iframe class = 'margin_top_34' src="https://docs.google.com/document/d/e/2PACX-1vSbduySdBO4zw7H8YOKlACenSVdQagymHcxKWxE8qk2rgfUA0gic37c2iqEk1bLXEWAnOf4IiuuYZXo/pub?embedded=true"></iframe>
+
+      <div class='flex_parent margin_top_34'><button onclick='change_to_post_test()' class='main-btn'><span>Next</span></button></div>
   </div>
 
   <!--@Ruwen, post test is also here-->
@@ -149,12 +189,27 @@
 
   <!--final score-->
   <div class='changing_frame' id = 'final_score' style='display: none;'>
-    <h1>Congratulations</h1>
-    <p class="p1">Your Team score: 80/100</p>
-    <p class="p1">It is the average of the other two students’ score </p>
-    <span>Anonymous Bear</span><span>Anonymous Dragon</span><span>Yu Zhao</span>
-    <h2>You all did a great job! </h2>
-    <button class='main-btn'><span>Cheers</span></button>
+
+    <div class='title-mid'>
+      <h1>Congratulations!</h1>
+    </div>
+
+    <div class='name_parent flex_parent_column'>
+      <p class='p1 center_children'>Your Team score: 80/100</p>
+      <p class='p1 center_children'>It is the average of the other two students’ score</p>
+
+      <div class="flex_parent margin_top_34">
+        <div class='name_tag' id = 'name_tag1'><h3>Anonymous Bear</h3></div>
+        <div class='name_tag' id = 'name_tag2'><h3>Anonymous Dragon</h3></div>
+        <div class='name_tag' id = 'name_tag3'><h3 id = 'myName2'>Yu Zhao</h3></div>
+      </div>
+
+      <h2 class="center_children black-h2 margin_top_34">You all did a great job! </h2>
+    </div>
+
+    <div class='flex_parent margin_top_34'>
+      <button class='main-btn'><span>Cheers</span></button>
+    </div>
   </div>
 
 
