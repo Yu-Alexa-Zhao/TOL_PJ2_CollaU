@@ -79,6 +79,7 @@
 
 
   <!--the expert vetting page-->
+  <div class='quiz'>
   <div class='changing_frame' id = 'first_quiz' style='display: none;'>
     <h1> Quiz: Ideal Gas Equation </h1>
     <br>
@@ -87,16 +88,16 @@
     <div class="first_quiz">
       <h3>What is ideal gas equation?</h3>
         <div class="p2">
-          <input type='radio' id='first_quiz_A' name="first_quiz"><span> A. P=RT</span></button></br>
-          <input type='radio' id='first_quiz_B' name="first_quiz"><span> B. PV=nRT</span></button></br>
-          <input type='radio' id='first_quiz_C' name="first_quiz"><span> C. V=PR/nT</span></button></br>
-          <input type='radio' id='first_quiz_D' name="first_quiz"><span> D. TV=nPR</span></button></br>
+          <input type='radio' id='first_quiz_A' name="first_quiz" onClick='first_quiz_A()'><span> A. P=RT</span></button></br>
+          <input type='radio' id='first_quiz_B' name="first_quiz" onClick='first_quiz_B()'><span> B. PV=nRT</span></button></br>
+          <input type='radio' id='first_quiz_C' name="first_quiz" onClick='first_quiz_C()'><span> C. V=PR/nT</span></button></br>
+          <input type='radio' id='first_quiz_D' name="first_quiz" onClick='first_quiz_D()'><span> D. TV=nPR</span></button></br>
         </div>
 
         <div id="first_correct_fb" style='display: none;'>
           <div class='flex_parent_column margin_op_16'>
             <div class = 'center_children_div fb_correct margin_top_16'>
-              <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">Correct!</h3></div>
+              <div class='flex_left_align'><img class = 'sm_icon' src="images/check_circle_24px_rounded.png"><h3 class="margin-left-5">Correct!</h3></div>
               <p class="p2 margin-left-30">Ideal Gas Equation describes the relationship between pressure, volume, number of molecules, constant and temperature.</p>
             </div>
         </div>
@@ -105,7 +106,7 @@
         <div id="first_incorrect_fb" style='display: none;'>
           <div class='flex_parent_column margin_op_16'>
             <div class = 'center_children_div fb_incorrect margin_top_16'>
-              <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">Incorrect!</h3></div>
+              <div class='flex_left_align'><img class = 'sm_icon' src="images/cancel_24px_rounded.png"><h3 class="margin-left-5">Incorrect!</h3></div>
               <p class="p2 margin-left-30">Ideal Gas Equation describes the relationship between pressure, volume, number of molecules, constant and temperature. It should be PV=nRT.</p>
             </div>
         </div>
@@ -117,16 +118,16 @@
     <div class='second_quiz'>
       <h3>What do P, V, T mean in Ideal Gas Equation?</h3>
         <div class="p2">
-          <input type='radio' id='second_quiz_A' name="second_quiz"><span> A. P is power, V is velocity, T is time</span></button></br>
-          <input type='radio' id='second_quiz_B' name="second_quiz"><span> B. P is pressure, V is velocity, T is temperature</span></button></br>
-          <input type='radio' id='second_quiz_C' name="second_quiz"><span> C. P is power, V is volume, T is time</span></button></br>
-          <input type='radio' id='second_quiz_D' name="second_quiz"><span> D. P is pressure, V is volume, T is temperature</span></button></br>
+          <input type='radio' id='second_quiz_A' name="second_quiz" onClick='second_quiz_A()'><span> A. P is power, V is velocity, T is time</span></button></br>
+          <input type='radio' id='second_quiz_B' name="second_quiz" onClick='second_quiz_B()'><span> B. P is pressure, V is velocity, T is temperature</span></button></br>
+          <input type='radio' id='second_quiz_C' name="second_quiz" onClick='second_quiz_C()'><span> C. P is power, V is volume, T is time</span></button></br>
+          <input type='radio' id='second_quiz_D' name="second_quiz" onClick='second_quiz_D()'><span> D. P is pressure, V is volume, T is temperature</span></button></br>
         </div>
 
         <div id="second_correct_fb" style='display: none;'>
           <div class='flex_parent_column margin_op_16'>
             <div class = 'center_children_div fb_correct margin_top_16'>
-              <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">Correct!</h3></div>
+              <div class='flex_left_align'><img class = 'sm_icon' src="images/check_circle_24px_rounded.png"><h3 class="margin-left-5">Correct!</h3></div>
               <p class="p2 margin-left-30">P is pressure, V is volume, T is temperature.</p>
             </div>
         </div>
@@ -135,7 +136,7 @@
         <div id="second_incorrect_fb" style='display: none;'>
           <div class='flex_parent_column margin_op_16'>
             <div class = 'center_children_div fb_incorrect margin_top_16'>
-              <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">Incorrect!</h3></div>
+              <div class='flex_left_align'><img class = 'sm_icon' src="images/cancel_24px_rounded.png"><h3 class="margin-left-5">Incorrect!</h3></div>
               <p class="p2 margin-left-30">P is pressure, V is volume, T is temperature. It should be D.</p>
             </div>
         </div>
@@ -149,16 +150,16 @@
     <div class='third_quiz'>
       <h3>Compressor can compress the refrigerant gas and change the temperature. Please use Ideal Gas Equation to explain it.</h3>
         <div class="p2">
-          <input type='radio' id='third_quiz_A' name="third_quiz"><span> A. The pressure increases, which makes the temperature get higher</span></button></br>
-          <input type='radio' id='third_quiz_B' name="third_quiz"><span> B. The pressure decreases, which makes the temperature get lower</span></button></br>
-          <input type='radio' id='third_quiz_C' name="third_quiz"><span> C. The temperature decreases, which makes the pressure get higher</span></button></br>
-          <input type='radio' id='third_quiz_D' name="third_quiz"><span> D. The temperature increases, which makes the pressure get lower</span></button></br>
+          <input type='radio' id='third_quiz_A' name="third_quiz" onClick='third_quiz_A()'><span> A. The pressure increases, which makes the temperature get higher</span></button></br>
+          <input type='radio' id='third_quiz_B' name="third_quiz" onClick='third_quiz_B()'><span> B. The pressure decreases, which makes the temperature get lower</span></button></br>
+          <input type='radio' id='third_quiz_C' name="third_quiz" onClick='third_quiz_C()'><span> C. The temperature decreases, which makes the pressure get higher</span></button></br>
+          <input type='radio' id='third_quiz_D' name="third_quiz" onClick='third_quiz_D()'><span> D. The temperature increases, which makes the pressure get lower</span></button></br>
         </div>
 
         <div id="third_correct_fb" style='display: none;'>
           <div class='flex_parent_column margin_op_16'>
             <div class = 'center_children_div fb_correct margin_top_16'>
-              <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">Correct!</h3></div>
+              <div class='flex_left_align'><img class = 'sm_icon' src="images/check_circle_24px_rounded.png"><h3 class="margin-left-5">Correct!</h3></div>
               <p class="p2 margin-left-30">Compress means compress the volume and increases the pressure. According to Idea Gas Equation, PV=nRT, when P increases, T goes up.</p>
             </div>
         </div>
@@ -167,7 +168,7 @@
     <div id="third_incorrect_fb" style='display: none;'>
       <div class='flex_parent_column margin_op_16'>
         <div class = 'center_children_div fb_incorrect margin_top_16'>
-          <div class='flex_left_align'><img class = 'sm_icon' src="images/info_24px_rounded.png"><h3 class="margin-left-5">Incorrect!</h3></div>
+          <div class='flex_left_align'><img class = 'sm_icon' src="images/cancel_24px_rounded.png"><h3 class="margin-left-5">Incorrect!</h3></div>
           <p class="p2 margin-left-30">Compress means compress the volume and increases the pressure. According to Idea Gas Equation, PV=nRT, when P increases, T goes up. It should be A.</p>
         </div>
     </div>
@@ -176,9 +177,13 @@
     <br>
 
     <div class='flex_parent margin_top_34' id='submit'><button onclick='check_first_quiz_answer(); check_second_quiz_answer(); check_third_quiz_answer(); quiz_submit();' class='main-btn'><span>Submit</span></button></div>
-    <div class='flex_parent margin_top_34' id='next' style='display: none;'><button onclick='change_to_team_assign()' class='main-btn'><span>Next</span></button></div>
+
+    <div class='flex_parent margin_top_34'>
+      <button onclick='change_to_team_assign()' id='next' style='display: none;' class='main-btn'><span>Next</span></button>
+    </div>
 
   </div>
+</div>
 
 
   <!--Assigning Team-->
@@ -362,9 +367,9 @@
           <input type="radio" name="question9" value="D">lowering, gases<br>
         </div>
         <br>
-
-      <button onclick='change_to_final_score()' class='main-btn'><span>Submit</span></button>
+      <div class='flex_parent margin_top_34' id='submit'><button onclick='change_to_final_score()' class='main-btn'><span>Submit</span></button></div>
   </div>
+
 
 
   <!--final score-->
