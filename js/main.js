@@ -306,38 +306,32 @@ function third_quiz_D() {
 //show feedback for the quiz
 function check_first_quiz_answer() {
 	var choice_B = document.getElementById('first_quiz_B');
-	var fb = document.getElementById('first_correct_fb');
 
 	if (choice_B.classList.contains('selected_choice')){
-		fb.innerHTML = "<p><strong>Correct!</strong> Ideal Gas Equation describes the relationship between pressure, volume, number of molecules, constant and temperature.</p>"
+		document.getElementById("first_correct_fb").style.display='block';
 	} else {
-		fb.innerHTML = "<P><strong>Incorrect!</strong> Ideal Gas Equation describes the relationship between pressure, volume, number of molecules, constant and temperature. It should be PV=nRT."
+		document.getElementById("first_incorrect_fb").style.display='block';
 	};
-	fb.style.display='block';
 }
 
 function check_second_quiz_answer() {
 	var choice_D = document.getElementById('second_quiz_D');
-	var fb = document.getElementById('second_correct_fb');
 
 	if (choice_D.classList.contains('selected_choice')){
-		fb.innerHTML = "<p><strong>Correct!</strong> P is pressure, V is volume, T is temperature.</p>"
+		document.getElementById("second_correct_fb").style.display='block';
 	} else {
-		fb.innerHTML = "<P><strong>Incorrect!</strong> P is pressure, V is volume, T is temperature. It should be D"
+		document.getElementById("second_incorrect_fb").style.display='block';
 	};
-	fb.style.display='block';
 }
 
 function check_third_quiz_answer() {
 	var choice_A = document.getElementById('third_quiz_A');
-	var fb = document.getElementById('third_correct_fb');
 
 	if (choice_A.classList.contains('selected_choice')){
-		fb.innerHTML = "<p><strong>Correct!</strong> Compress means compress the volume and increases the pressure. According to Idea Gas Equation, PV=nRT, when P increases, T goes up.</p>"
+		document.getElementById("third_correct_fb").style.display='block';
 	} else {
-		fb.innerHTML = "<P><strong>Incorrect!</strong> Compress means compress the volume and increases the pressure. According to Idea Gas Equation, PV=nRT, when P increases, T goes up. It should be A."
+		document.getElementById("third_incorrect_fb").style.display='block';
 	};
-	fb.style.display='block';
 }
 
 //change submit button to next
