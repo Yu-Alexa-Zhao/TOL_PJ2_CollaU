@@ -537,3 +537,61 @@ iframe {
 	left: 63vw;
 	top: 22.3vw;
 }
+
+input[type='radio']:after {
+		width: 15px;
+		height: 15px;
+		border-radius: 15px;
+		top: 0px;
+		left: -1px;
+		position: relative;
+		background-color: white;
+		content: '';
+		display: inline-block;
+		visibility: visible;
+		border: 1px solid #4E4E4E;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 22px;
+}
+
+input[type='radio']:checked:after {
+		width: 15px;
+		height: 15px;
+		border-radius: 15px;
+		top: 0px;
+		left: -1px;
+		position: relative;
+		background-color: #1C2ECC;
+		content: '';
+		display: inline-block;
+		visibility: visible;
+		border: 1px solid #4E4E4E;
+		font-family: Source Sans Pro;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 22px;
+}
+
+.fb_correct {
+	width: 500px;
+	background: #F9FFFB;
+	border: 1px solid #01CD62;
+	box-sizing: border-box;
+	border-radius: 10px;
+
+	padding: 14px 23px 14px 23px;
+}
+
+.fb_incorrect {
+	width: 500px;
+	background: #FFFBF9;
+	border: 1px solid #FF6B6B;
+	box-sizing: border-box;
+	border-radius: 10px;
+
+	padding: 14px 23px 14px 23px;
+}
