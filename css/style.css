@@ -596,3 +596,9 @@ input[type='radio']:checked:after {
 
 	padding: 14px 23px 14px 23px;
 }
+
+.quiz {
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
