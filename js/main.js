@@ -128,7 +128,12 @@ function change_to_final_score() {
 	document.getElementById('myName2').innerHTML = userInput;
 }
 
-function choose_A_as_answer() {
+
+//multiple choice
+
+//first_quiz
+
+function first_quiz_A() {
 	var selected = document.getElementById('first_quiz_A');
 	//selected.className += " selected_choice"
 	selected.classList.toggle('selected_choice');
@@ -142,9 +147,7 @@ function choose_A_as_answer() {
 	quiz_D.classList.remove('selected_choice');
 }
 
-//multiple choice
-
-function choose_B_as_answer() {
+function first_quiz_B() {
 	var selected = document.getElementById('first_quiz_B');
 	//selected.className += " selected_choice"
 	selected.classList.toggle('selected_choice');
@@ -158,7 +161,7 @@ function choose_B_as_answer() {
 	quiz_D.classList.remove('selected_choice');
 }
 
-function choose_C_as_answer() {
+function first_quiz_C() {
 	var selected = document.getElementById('first_quiz_C');
 	//selected.className += " selected_choice"
 	selected.classList.toggle('selected_choice');
@@ -172,7 +175,7 @@ function choose_C_as_answer() {
 	quiz_D.classList.remove('selected_choice');
 }
 
-function choose_D_as_answer() {
+function first_quiz_D() {
 	var selected = document.getElementById('first_quiz_D');
 	//selected.className += " selected_choice"
 	selected.classList.toggle('selected_choice');
@@ -184,6 +187,163 @@ function choose_D_as_answer() {
 	quiz_A.classList.remove('selected_choice');
 	quiz_B.classList.remove('selected_choice');
 	quiz_C.classList.remove('selected_choice');
+}
+
+//second_quiz
+function second_quiz_A() {
+	var selected = document.getElementById('second_quiz_A');
+	//selected.className += " selected_choice"
+	selected.classList.toggle('selected_choice');
+
+	var quiz_B = document.getElementById('second_quiz_B');
+	var quiz_C = document.getElementById('second_quiz_C');
+	var quiz_D = document.getElementById('second_quiz_D');
+
+	quiz_B.classList.remove('selected_choice');
+	quiz_C.classList.remove('selected_choice');
+	quiz_D.classList.remove('selected_choice');
+}
+
+function second_quiz_B() {
+	var selected = document.getElementById('second_quiz_B');
+	//selected.className += " selected_choice"
+	selected.classList.toggle('selected_choice');
+
+	var quiz_A = document.getElementById('second_quiz_A');
+	var quiz_C = document.getElementById('second_quiz_C');
+	var quiz_D = document.getElementById('second_quiz_D');
+
+	quiz_A.classList.remove('selected_choice');
+	quiz_C.classList.remove('selected_choice');
+	quiz_D.classList.remove('selected_choice');
+}
+
+function second_quiz_C() {
+	var selected = document.getElementById('second_quiz_C');
+	//selected.className += " selected_choice"
+	selected.classList.toggle('selected_choice');
+
+	var quiz_A = document.getElementById('second_quiz_A');
+	var quiz_B = document.getElementById('second_quiz_B');
+	var quiz_D = document.getElementById('second_quiz_D');
+
+	quiz_A.classList.remove('selected_choice');
+	quiz_B.classList.remove('selected_choice');
+	quiz_D.classList.remove('selected_choice');
+}
+
+function second_quiz_D() {
+	var selected = document.getElementById('second_quiz_D');
+	//selected.className += " selected_choice"
+	selected.classList.toggle('selected_choice');
+
+	var quiz_A = document.getElementById('second_quiz_A');
+	var quiz_B = document.getElementById('second_quiz_B');
+	var quiz_C = document.getElementById('second_quiz_C');
+
+	quiz_A.classList.remove('selected_choice');
+	quiz_B.classList.remove('selected_choice');
+	quiz_C.classList.remove('selected_choice');
+}
+
+//third_quiz
+function third_quiz_A() {
+	var selected = document.getElementById('third_quiz_A');
+	//selected.className += " selected_choice"
+	selected.classList.toggle('selected_choice');
+
+	var quiz_B = document.getElementById('third_quiz_B');
+	var quiz_C = document.getElementById('third_quiz_C');
+	var quiz_D = document.getElementById('third_quiz_D');
+
+	quiz_B.classList.remove('selected_choice');
+	quiz_C.classList.remove('selected_choice');
+	quiz_D.classList.remove('selected_choice');
+}
+
+function third_quiz_B() {
+	var selected = document.getElementById('third_quiz_B');
+	//selected.className += " selected_choice"
+	selected.classList.toggle('selected_choice');
+
+	var quiz_A = document.getElementById('third_quiz_A');
+	var quiz_C = document.getElementById('third_quiz_C');
+	var quiz_D = document.getElementById('third_quiz_D');
+
+	quiz_A.classList.remove('selected_choice');
+	quiz_C.classList.remove('selected_choice');
+	quiz_D.classList.remove('selected_choice');
+}
+
+function third_quiz_C() {
+	var selected = document.getElementById('third_quiz_C');
+	//selected.className += " selected_choice"
+	selected.classList.toggle('selected_choice');
+
+	var quiz_A = document.getElementById('third_quiz_A');
+	var quiz_B = document.getElementById('third_quiz_B');
+	var quiz_D = document.getElementById('third_quiz_D');
+
+	quiz_A.classList.remove('selected_choice');
+	quiz_B.classList.remove('selected_choice');
+	quiz_D.classList.remove('selected_choice');
+}
+
+function third_quiz_D() {
+	var selected = document.getElementById('third_quiz_D');
+	//selected.className += " selected_choice"
+	selected.classList.toggle('selected_choice');
+
+	var quiz_A = document.getElementById('third_quiz_A');
+	var quiz_B = document.getElementById('third_quiz_B');
+	var quiz_C = document.getElementById('third_quiz_C');
+
+	quiz_A.classList.remove('selected_choice');
+	quiz_B.classList.remove('selected_choice');
+	quiz_C.classList.remove('selected_choice');
+}
+
+//show feedback for the quiz
+function check_first_quiz_answer() {
+	var choice_B = document.getElementById('first_quiz_B');
+	var fb = document.getElementById('first_correct_fb');
+
+	if (choice_B.classList.contains('selected_choice')){
+		fb.innerHTML = "<p><strong>Correct!</strong> Ideal Gas Equation describes the relationship between pressure, volume, number of molecules, constant and temperature.</p>"
+	} else {
+		fb.innerHTML = "<P><strong>Incorrect!</strong> Ideal Gas Equation describes the relationship between pressure, volume, number of molecules, constant and temperature. It should be PV=nRT."
+	};
+	fb.style.display='block';
+}
+
+function check_second_quiz_answer() {
+	var choice_D = document.getElementById('second_quiz_D');
+	var fb = document.getElementById('second_correct_fb');
+
+	if (choice_D.classList.contains('selected_choice')){
+		fb.innerHTML = "<p><strong>Correct!</strong> P is pressure, V is volume, T is temperature.</p>"
+	} else {
+		fb.innerHTML = "<P><strong>Incorrect!</strong> P is pressure, V is volume, T is temperature. It should be D"
+	};
+	fb.style.display='block';
+}
+
+function check_third_quiz_answer() {
+	var choice_A = document.getElementById('third_quiz_A');
+	var fb = document.getElementById('third_correct_fb');
+
+	if (choice_A.classList.contains('selected_choice')){
+		fb.innerHTML = "<p><strong>Correct!</strong> Compress means compress the volume and increases the pressure. According to Idea Gas Equation, PV=nRT, when P increases, T goes up.</p>"
+	} else {
+		fb.innerHTML = "<P><strong>Incorrect!</strong> Compress means compress the volume and increases the pressure. According to Idea Gas Equation, PV=nRT, when P increases, T goes up. It should be A."
+	};
+	fb.style.display='block';
+}
+
+//change submit button to next
+function quiz_submit() {
+	document.getElementById('submit').style.display='none';
+	document.getElementById('next').style.display='block';
 }
 
 
@@ -204,7 +364,7 @@ function startTimer1() {
   var s = checkSecond((timeArray[1] - 1));
   if(s==59){m=m-1}
   //if(m<0){alert('timer completed')}
-  
+
   document.getElementById('timer1').innerHTML =
     m + ":" + s;
 
@@ -218,7 +378,7 @@ function startTimer2() {
   var s = checkSecond((timeArray[1] - 1));
   if(s==59){m=m-1}
   //if(m<0){alert('timer completed')}
-  
+
   document.getElementById('timer2').innerHTML =
     m + ":" + s;
 
@@ -232,7 +392,7 @@ function startTimer3() {
   var s = checkSecond((timeArray[1] - 1));
   if(s==59){m=m-1}
   //if(m<0){alert('timer completed')}
-  
+
   document.getElementById('timer3').innerHTML =
     m + ":" + s;
 
@@ -244,4 +404,3 @@ function checkSecond(sec) {
   if (sec < 0) {sec = "59"};
   return sec;
 }
-
